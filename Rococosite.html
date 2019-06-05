@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rococo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+
+
+    <style>
+        .masthead {
+          height: 100vh;
+          min-height: 500px;
+
+        }
+        html {
+          height:100%;
+        }
+
+        body {
+          margin:0;
+        }
+
+        .bg {
+          animation:slide 3s ease-in-out infinite alternate;
+          background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+          bottom:0;
+          left:-50%;
+          opacity:.5;
+          position:fixed;
+          right:-50%;
+          top:0;
+          z-index:-1;
+        }
+
+        .bg2 {
+          animation-direction:alternate-reverse;
+          animation-duration:15s;
+        }
+
+        .bg3 {
+          animation-duration:5s;
+        }
+
+        .content {
+          background-color:rgba(255,255,255,.8);
+          border-radius:.25em;
+          box-shadow:0 0 .25em rgba(0,0,0,.25);
+          box-sizing:border-box;
+          left:50%;
+          padding:10vmin;
+          position:fixed;
+          text-align:center;
+          top:50%;
+          transform:translate(-50%, -50%);
+        }
+
+        h1 {
+          font-family:monospace;
+        }
+
+        @keyframes slide {
+          0% {
+            transform:translateX(-25%);
+          }
+          100% {
+            transform:translateX(25%);
+          }
+        }
+    </style>
+
+    <script>
+        function setupQuestion(){
+                //getting stuff from html body
+                var q = document.getElementById("questionOutput");
+                var r = document.getElementById("response");
+                var sr = document.getElementById("submitResponse");
+                var s = document.getElementById("score");
+                var qo1 = document.getElementById("questionOption1");
+                var qo2 = document.getElementById("questionOption2");
+                var qo3 = document.getElementById("questionOption3");
+                var qo4 = document.getElementById("questionOption4");
+                var qo5 = document.getElementById("questionOption5");
+
+                //hiding it all to start with
+                q.style.display = "none";
+                s.style.display = "none";
+                r.style.display = "none";
+                sr.style.display = "none";
+                qo1.style.display = "none";
+                qo2.style.display = "none";
+                qo3.style.display = "none";
+                qo4.style.display = "none";
+                qo5.style.display = "none";
+                //console.log("im getting in");
+                }
+        </script>
+
+</head>
+
+<body>
+    <a class="navbar-brand" href="#">
+        <!––<img src="Rococo_LOGO.png" style="display: inline-block;">-->
+        <span style="display: inline-block;"></span>
+    </a>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <header class="masthead">
+        <div class="container h-0">
+            <div class="row h-0 align-items-right">
+                <div class="col-12 text-right">
+                    <h1 id="score">Score=</h1>
+                </div>
+            </div>
+        </div>
+        <div class="container h-100">
+            <div class="row h-75 align-items-center">
+                <div class="col-12 text-center">
+                    <h1 id="roomNumberShown">Player Name #</h1>
+                    <input type="textfield" placeholder="enter room # here" id="roomID" />
+                    <h1 id="nicknameOutput">Your Nickname!</h1>
+                    <input type="textfield" placeholder="enter nickname here" id="playerName" />
+                    <button id="joinRoom">Join Room! </button>
+                    <h4 id="questionOutput">Welcome to Rococo!! Waiting for others to join room! </h4>
+                    <input type="textfield" placeholder="enter response here" id="response" />
+                    <button id="submitResponse">Submit Response! </button>
+                    <button id="questionOption1">Option 1</button>
+                    <button id="questionOption2">Option 2</button>
+                    <button id="questionOption3">Option 3</button>
+                    <button id="questionOption4">Option 4</button>
+                    <button id="questionOption5">Option 5</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <body onload="setupQuestion();"></body>
+    <script src="./Rococosite.js"></script>
+</body>
+
+</html>
