@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Local Tribal Council</title>
+    <script src="https://www.gstatic.com/firebasejs/6.3.3/firebase.js"></script>
+
+</head>
+
+<body>
+      
+        <h1 id="roomNumberShown">Council Code </h1>
+
+        <input type="textfield" placeholder="enter code here" id="roomID" />
+
+        <h1 id="nicknameOutput">Tribal Nickname</h1>
+    
+        <h1 id="lives">Lives Left:</h1>
+    
+        <h1 id = "header"> Welcome to Tribal!  Waiting for game to start! </h1>
+
+
+        <input type="textfield" placeholder="enter nickname here" id="playerName" />
+
+        <button id="joinGame">Join Game! </button>
+        <button id="startGame">Start Game! </button>
+
+        <h4 id="questionOutput">Welcome to Tribal!! Waiting for others to join room! </h4>
+        <img id="questionPic" height="420" width="420">
+
+        <input type="textfield" placeholder="enter response here" id="response1" />
+        <input type="textfield" placeholder="enter response here" id="response2" />
+        <input type="textfield" placeholder="enter response here" id="response3" />
+
+
+        <button id="submitResponse">Submit Response! </button>
+    
+        <button id="buttonA" onclick = "return checkMCAnswer(this.id);">Option A</button>
+        <button id="buttonB" onclick = "return checkMCAnswer(this.id);">Option B</button>
+        <button id="buttonC" onclick = "return checkMCAnswer(this.id);">Option C</button>
+        <button id="buttonD" onclick = "return checkMCAnswer(this.id);">Option D</button>
+    
+        <button id="true">TRUE</button>
+        <button id="false">FALSE</button>
+    
+        <button id="buttonAdd1" onclick = "return checkMCAnswer(this.id);">Add 1</button>
+        <button id="buttonAdd2" onclick = "return checkMCAnswer(this.id);">Add 2</button>
+        <button id="buttonAdd3" onclick = "return checkMCAnswer(this.id);">Add 3</button>
+        <button id="buttonAdd4" onclick = "return checkMCAnswer(this.id);">Add 4</button>
+        <button id="buttonAdd5" onclick = "return checkMCAnswer(this.id);">Add 5</button>
+        <button id="buttonAdd6" onclick = "return checkMCAnswer(this.id);">Add 6</button>
+        <button id="buttonAdd7" onclick = "return checkMCAnswer(this.id);">Add 7</button>
+        <button id="buttonAdd8" onclick = "return checkMCAnswer(this.id);">Add 8</button>
+        <button id="buttonAdd9" onclick = "return checkMCAnswer(this.id);">Add 9</button>
+        <button id="buttonAdd10" onclick = "return checkMCAnswer(this.id);">Add 10</button>
+        <button id="buttonAdd11" onclick = "return checkMCAnswer(this.id);">Add 11</button>
+        <button id="buttonAdd12" onclick = "return checkMCAnswer(this.id);">Add 12</button>
+        <button id="buttonAdd13" onclick = "return checkMCAnswer(this.id);">Add 13</button>
+        <button id="buttonAdd14" onclick = "return checkMCAnswer(this.id);">Add 14</button>
+        <button id="buttonAdd15" onclick = "return checkMCAnswer(this.id);">Add 15</button>
+        <button id="buttonAdd16" onclick = "return checkMCAnswer(this.id);">Add 16</button>
+        <button id="buttonAdd17" onclick = "return checkMCAnswer(this.id);">Add 17</button>
+        <button id="buttonAdd18" onclick = "return checkMCAnswer(this.id);">Add 18</button>
+        <button id="buttonAdd19" onclick = "return checkMCAnswer(this.id);">Add 19</button>
+        <button id="buttonAdd20" onclick = "return checkMCAnswer(this.id);">Add 20</button>
+        <button id="buttonAdd21" onclick = "return checkMCAnswer(this.id);">Add 21</button>
+        <button id="buttonAdd22" onclick = "return checkMCAnswer(this.id);">Add 22</button>
+        <button id="buttonAdd23" onclick = "return checkMCAnswer(this.id);">Add 23</button>
+        <button id="buttonAdd24" onclick = "return checkMCAnswer(this.id);">Add 24</button>
+    
+    
+        <progress value = "0" max = "10" id="progressBar" ></progress>
+    
+    
+        <button style="display:block;width:120px; height:50px;" onclick="document.getElementById('fileButton').click()" id= "fileButtonHolder">Upload Profile Pic</button>
+        <input type='file' id="fileButton" style="display:none">
+        <progress value="0" max="100" id="uploader">0%</progress>
+    
+        <img id="profPic" height="420" width="420">
+    
+        <img id="img1" height="420" width="420">
+        <img id="img2" height="420" width="420">
+        <img id="img3" height="420" width="420">
+        <img id="img4" height="420" width="420">
+        <img id="img5" height="420" width="420">
+        <img id="img6" height="420" width="420">
+        <img id="img7" height="420" width="420">
+        <img id="img8" height="420" width="420">
+        <img id="img9" height="420" width="420">
+        <img id="img10" height="420" width="420">
+        <img id="img11" height="420" width="420">
+        <img id="img12" height="420" width="420">
+        <img id="img13" height="420" width="420">
+        <img id="img14" height="420" width="420">
+        <img id="img15" height="420" width="420">
+        <img id="img16" height="420" width="420">
+        <img id="img17" height="420" width="420">
+        <img id="img18" height="420" width="420">
+        <img id="img19" height="420" width="420">
+        <img id="img20" height="420" width="420">
+        <img id="img21" height="420" width="420">
+        <img id="img22" height="420" width="420">
+        <img id="img23" height="420" width="420">
+        <img id="img24" height="420" width="420">
+
+    <!--<button id = "makeButton"> Add Button </button> -->
+
+    <script src="./localcouncil.js"></script>
+    
+    
+</body>
+
+</html>
